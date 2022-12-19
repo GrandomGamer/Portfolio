@@ -1,2 +1,2 @@
 # Portfolio
-Personal portfolio made with NextJS
+Personal portfolio made with NextJS.
