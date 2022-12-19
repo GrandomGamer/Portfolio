@@ -1,0 +1,110 @@
+$primary: #3a9ff8;
+$secondary: #828df8;
+$accent: #1d283a;
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+@mixin transform($transforms) {
+	-webkit-transform: $transforms;
+	-moz-transform: $transforms;
+	-ms-transform: $transforms;
+	transform: $transforms;
+}
+
+@mixin scale($scale) {
+	@include transform(scale($scale));
+}
+
+@font-face {
+  font-family: Kollektif;
+  src: url(Kollektif.ttf);
+}
+
+.wrapper {
+    height: fit-content;
+    width: 100%;
+    float: right;
+}
+
+section {
+    height: 100vh;
+    background-color: $primary;
+}
+
+.intro {
+    height: fit-content;
+    width: fit-content;
+    display: grid;
+    justify-content: center;
+}
+
+.intro h1 {
+    font-size: 5rem;
+    font-weight: bold;
+    color: white;
+    margin: 0;
+}
+
+.typewrite {
+    font-size: 3rem;
+    font-weight: 500;
+    color: $accent;
+    padding-top: 1rem;
+}
+
+.home {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $primary;
+    gap: 5rem;
+}
+
+.btn {
+    background: $accent;
+    color: #fff;
+    font-weight: 500;
+    padding: 1rem;
+    display: inline-block;
+    border-radius: 10px;
+}
+
+.links {
+    display: flex;
+    align-items: center;
+    justify-self: left;
+    margin-top: 2rem;
+    gap: 24px;
+  }
+  
+.link {
+    display: flex;
+    justify-content: center;
+    font-size: 3.75rem;
+    color: $accent;
+    transition: all .2s ease-in-out;
+}
+
+.link:hover {
+    color:white;
+    @include scale(1.1);
+}
+
+.skills {
+    background-color: $secondary;
+}
